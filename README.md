@@ -1,5 +1,7 @@
-### Algorithms class project NO 1
+# Adjacency Graphs
+A toy implementation of Graphs and their Adjacency Graphs. 
+Written for Bioinformatic's Algorithms laboratories.
 
-# Building some graphs
-# Algorithms for adjecency
-# Methods for saving and loading to/from txt
+Authors
+-----
+**Miłosz Chodkowski_PUT Poznan** [777moneymaker](https://github.com/777moneymaker)
