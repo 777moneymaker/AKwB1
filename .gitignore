@@ -1,0 +1,5 @@
+*.cmake
+*.cbp
+Makefile
+CMakeFiles
+SJP_Graph
