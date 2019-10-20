@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/SJP_Graph.dir/Graph.cpp.o"
   "CMakeFiles/SJP_Graph.dir/main.cpp.o"
-  "SJP_Graph.pdb"
   "SJP_Graph"
+  "SJP_Graph.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

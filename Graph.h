@@ -9,21 +9,36 @@
 //                                                       __/ |
 //
 
+#ifndef SJP_GRAPH_GRAPH_H
+#define SJP_GRAPH_GRAPH_H
+
 #include <iostream>
 #include <vector>
 #include <string>
-#include "Graph.h"
+#include <fstream>
+#include <cstdlib>
 
 using namespace std;
 
-int main() {
-    string filename; string iters;
-    cout<<"Give the number of vertices: "<<endl;
-    cin >> iters;
-    auto *G = new Graph(stoi(iters));
-    G->printGraph();
-    G->loadGraph();
-    G->printGraph();
+class Graph{
+public:
+    int num_of_vert = 0;
+    int adj_matrix[50][50] = {0};
 
-    return 0;
-}
+    Graph(int nv=5);
+
+    void saveGraph();
+
+    void loadGraph();
+
+    void printGraph();
+
+    void clearGraph();
+
+    void addArc(int tail, int head);
+
+    void removeArc(int tail, int head);
+};
+
+
+#endif //SJP_GRAPH_GRAPH_H

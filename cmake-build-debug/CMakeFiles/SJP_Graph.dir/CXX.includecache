@@ -6,7 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/moneymaker/Desktop/SJP Graph/main.cpp
+/home/moneymaker/Pulpit/akwb/Graph.cpp
+iostream
+-
+string
+-
+cstdlib
+-
+Graph.h
+/home/moneymaker/Pulpit/akwb/Graph.h
+
+/home/moneymaker/Pulpit/akwb/Graph.h
 iostream
 -
 vector
@@ -14,5 +24,7 @@ vector
 string
 -
 fstream
+-
+cstdlib
 -
 

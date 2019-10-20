@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/SJP_Graph.dir/main.cpp.o  -o SJP_Graph 
+/usr/bin/c++  -g   CMakeFiles/SJP_Graph.dir/main.cpp.o CMakeFiles/SJP_Graph.dir/Graph.cpp.o  -o SJP_Graph 

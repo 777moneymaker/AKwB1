@@ -3,4 +3,4 @@ project(SJP_Graph)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(SJP_Graph main.cpp)
+add_executable(SJP_Graph main.cpp Graph.cpp Graph.h)
