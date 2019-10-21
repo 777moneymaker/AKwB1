@@ -12,7 +12,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "Graph.h"
+#include "Libraries/Graph.h"
 
 using namespace std;
 
@@ -21,9 +21,12 @@ int main() {
     cout<<"Give the number of vertices: "<<endl;
     cin >> iters;
     auto *G = new Graph(stoi(iters));
-    G->printGraph();
+    G->printMatrix();
+    G->printList();
     G->loadGraph();
-    G->printGraph();
+    G->printMatrix();
+    G->printList();
+    
 
     return 0;
 }

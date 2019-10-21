@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/moneymaker/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/88/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/moneymaker/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/88/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moneymaker/Pulpit/akwb
+CMAKE_SOURCE_DIR = /home/moneymaker/Desktop/akwb1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moneymaker/Pulpit/akwb/cmake-build-debug
+CMAKE_BINARY_DIR = /home/moneymaker/Desktop/akwb1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/moneymaker/Pulpit/akwb/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/moneymaker/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/88/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/moneymaker/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/88/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moneymaker/Pulpit/akwb/cmake-build-debug/CMakeFiles /home/moneymaker/Pulpit/akwb/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles /home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/moneymaker/Pulpit/akwb/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,32 +123,59 @@ SJP_Graph/fast:
 	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/build
 .PHONY : SJP_Graph/fast
 
-Graph.o: Graph.cpp.o
+Libraries/Graph.o: Libraries/Graph.cpp.o
 
-.PHONY : Graph.o
+.PHONY : Libraries/Graph.o
 
 # target to build an object file
-Graph.cpp.o:
-	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/Graph.cpp.o
-.PHONY : Graph.cpp.o
+Libraries/Graph.cpp.o:
+	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.o
+.PHONY : Libraries/Graph.cpp.o
 
-Graph.i: Graph.cpp.i
+Libraries/Graph.i: Libraries/Graph.cpp.i
 
-.PHONY : Graph.i
+.PHONY : Libraries/Graph.i
 
 # target to preprocess a source file
-Graph.cpp.i:
-	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/Graph.cpp.i
-.PHONY : Graph.cpp.i
+Libraries/Graph.cpp.i:
+	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.i
+.PHONY : Libraries/Graph.cpp.i
 
-Graph.s: Graph.cpp.s
+Libraries/Graph.s: Libraries/Graph.cpp.s
 
-.PHONY : Graph.s
+.PHONY : Libraries/Graph.s
 
 # target to generate assembly for a file
-Graph.cpp.s:
-	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/Graph.cpp.s
-.PHONY : Graph.cpp.s
+Libraries/Graph.cpp.s:
+	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.s
+.PHONY : Libraries/Graph.cpp.s
+
+Libraries/Vertex.o: Libraries/Vertex.cpp.o
+
+.PHONY : Libraries/Vertex.o
+
+# target to build an object file
+Libraries/Vertex.cpp.o:
+	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.o
+.PHONY : Libraries/Vertex.cpp.o
+
+Libraries/Vertex.i: Libraries/Vertex.cpp.i
+
+.PHONY : Libraries/Vertex.i
+
+# target to preprocess a source file
+Libraries/Vertex.cpp.i:
+	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.i
+.PHONY : Libraries/Vertex.cpp.i
+
+Libraries/Vertex.s: Libraries/Vertex.cpp.s
+
+.PHONY : Libraries/Vertex.s
+
+# target to generate assembly for a file
+Libraries/Vertex.cpp.s:
+	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.s
+.PHONY : Libraries/Vertex.cpp.s
 
 main.o: main.cpp.o
 
@@ -186,9 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... SJP_Graph"
 	@echo "... edit_cache"
-	@echo "... Graph.o"
-	@echo "... Graph.i"
-	@echo "... Graph.s"
+	@echo "... Libraries/Graph.o"
+	@echo "... Libraries/Graph.i"
+	@echo "... Libraries/Graph.s"
+	@echo "... Libraries/Vertex.o"
+	@echo "... Libraries/Vertex.i"
+	@echo "... Libraries/Vertex.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

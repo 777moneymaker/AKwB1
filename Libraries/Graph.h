@@ -17,6 +17,7 @@
 #include <string>
 #include <fstream>
 #include <cstdlib>
+#include "Vertex.h"
 
 using namespace std;
 
@@ -24,20 +25,29 @@ class Graph{
 public:
     int num_of_vert = 0;
     int adj_matrix[50][50] = {0};
+    int adj_list[50][50] = {0};
 
     Graph(int nv=5);
 
-    void saveGraph();
+    void createMatrix();
 
-    void loadGraph();
+    void printMatrix();
 
-    void printGraph();
+    void clearMatrix();
 
-    void clearGraph();
+    void createList();
+
+    void printList();
+
+    void clearList();
 
     void addArc(int tail, int head);
 
     void removeArc(int tail, int head);
+
+    void saveGraph();
+
+    void loadGraph();
 };
 
 

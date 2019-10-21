@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/moneymaker/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/88/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/moneymaker/Downloads/clion-2019.2.4/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/88/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moneymaker/Pulpit/akwb
+CMAKE_SOURCE_DIR = /home/moneymaker/Desktop/akwb1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moneymaker/Pulpit/akwb/cmake-build-debug
+CMAKE_BINARY_DIR = /home/moneymaker/Desktop/akwb1/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/SJP_Graph.dir/depend.make
@@ -59,43 +59,58 @@ include CMakeFiles/SJP_Graph.dir/flags.make
 
 CMakeFiles/SJP_Graph.dir/main.cpp.o: CMakeFiles/SJP_Graph.dir/flags.make
 CMakeFiles/SJP_Graph.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moneymaker/Pulpit/akwb/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SJP_Graph.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SJP_Graph.dir/main.cpp.o -c /home/moneymaker/Pulpit/akwb/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SJP_Graph.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SJP_Graph.dir/main.cpp.o -c /home/moneymaker/Desktop/akwb1/main.cpp
 
 CMakeFiles/SJP_Graph.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SJP_Graph.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moneymaker/Pulpit/akwb/main.cpp > CMakeFiles/SJP_Graph.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moneymaker/Desktop/akwb1/main.cpp > CMakeFiles/SJP_Graph.dir/main.cpp.i
 
 CMakeFiles/SJP_Graph.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SJP_Graph.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moneymaker/Pulpit/akwb/main.cpp -o CMakeFiles/SJP_Graph.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moneymaker/Desktop/akwb1/main.cpp -o CMakeFiles/SJP_Graph.dir/main.cpp.s
 
-CMakeFiles/SJP_Graph.dir/Graph.cpp.o: CMakeFiles/SJP_Graph.dir/flags.make
-CMakeFiles/SJP_Graph.dir/Graph.cpp.o: ../Graph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moneymaker/Pulpit/akwb/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SJP_Graph.dir/Graph.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SJP_Graph.dir/Graph.cpp.o -c /home/moneymaker/Pulpit/akwb/Graph.cpp
+CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.o: CMakeFiles/SJP_Graph.dir/flags.make
+CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.o: ../Libraries/Graph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.o -c /home/moneymaker/Desktop/akwb1/Libraries/Graph.cpp
 
-CMakeFiles/SJP_Graph.dir/Graph.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SJP_Graph.dir/Graph.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moneymaker/Pulpit/akwb/Graph.cpp > CMakeFiles/SJP_Graph.dir/Graph.cpp.i
+CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moneymaker/Desktop/akwb1/Libraries/Graph.cpp > CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.i
 
-CMakeFiles/SJP_Graph.dir/Graph.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SJP_Graph.dir/Graph.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moneymaker/Pulpit/akwb/Graph.cpp -o CMakeFiles/SJP_Graph.dir/Graph.cpp.s
+CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moneymaker/Desktop/akwb1/Libraries/Graph.cpp -o CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.s
+
+CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.o: CMakeFiles/SJP_Graph.dir/flags.make
+CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.o: ../Libraries/Vertex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.o -c /home/moneymaker/Desktop/akwb1/Libraries/Vertex.cpp
+
+CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moneymaker/Desktop/akwb1/Libraries/Vertex.cpp > CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.i
+
+CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moneymaker/Desktop/akwb1/Libraries/Vertex.cpp -o CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.s
 
 # Object files for target SJP_Graph
 SJP_Graph_OBJECTS = \
 "CMakeFiles/SJP_Graph.dir/main.cpp.o" \
-"CMakeFiles/SJP_Graph.dir/Graph.cpp.o"
+"CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.o" \
+"CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.o"
 
 # External object files for target SJP_Graph
 SJP_Graph_EXTERNAL_OBJECTS =
 
 SJP_Graph: CMakeFiles/SJP_Graph.dir/main.cpp.o
-SJP_Graph: CMakeFiles/SJP_Graph.dir/Graph.cpp.o
+SJP_Graph: CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.o
+SJP_Graph: CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.o
 SJP_Graph: CMakeFiles/SJP_Graph.dir/build.make
 SJP_Graph: CMakeFiles/SJP_Graph.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/moneymaker/Pulpit/akwb/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable SJP_Graph"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable SJP_Graph"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SJP_Graph.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +123,6 @@ CMakeFiles/SJP_Graph.dir/clean:
 .PHONY : CMakeFiles/SJP_Graph.dir/clean
 
 CMakeFiles/SJP_Graph.dir/depend:
-	cd /home/moneymaker/Pulpit/akwb/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moneymaker/Pulpit/akwb /home/moneymaker/Pulpit/akwb /home/moneymaker/Pulpit/akwb/cmake-build-debug /home/moneymaker/Pulpit/akwb/cmake-build-debug /home/moneymaker/Pulpit/akwb/cmake-build-debug/CMakeFiles/SJP_Graph.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/moneymaker/Desktop/akwb1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moneymaker/Desktop/akwb1 /home/moneymaker/Desktop/akwb1 /home/moneymaker/Desktop/akwb1/cmake-build-debug /home/moneymaker/Desktop/akwb1/cmake-build-debug /home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles/SJP_Graph.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/SJP_Graph.dir/depend
 

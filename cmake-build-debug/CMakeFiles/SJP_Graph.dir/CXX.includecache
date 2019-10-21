@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/moneymaker/Pulpit/akwb/Graph.cpp
+/home/moneymaker/Desktop/akwb1/Libraries/Graph.cpp
 iostream
 -
 string
@@ -14,9 +14,9 @@ string
 cstdlib
 -
 Graph.h
-/home/moneymaker/Pulpit/akwb/Graph.h
+/home/moneymaker/Desktop/akwb1/Libraries/Graph.h
 
-/home/moneymaker/Pulpit/akwb/Graph.h
+/home/moneymaker/Desktop/akwb1/Libraries/Graph.h
 iostream
 -
 vector
@@ -27,4 +27,28 @@ fstream
 -
 cstdlib
 -
+Vertex.h
+/home/moneymaker/Desktop/akwb1/Libraries/Vertex.h
+
+/home/moneymaker/Desktop/akwb1/Libraries/Vertex.h
+iostream
+-
+vector
+-
+string
+-
+fstream
+-
+cstdlib
+-
+
+/home/moneymaker/Desktop/akwb1/main.cpp
+iostream
+-
+vector
+-
+string
+-
+Libraries/Graph.h
+/home/moneymaker/Desktop/akwb1/Libraries/Graph.h
 
