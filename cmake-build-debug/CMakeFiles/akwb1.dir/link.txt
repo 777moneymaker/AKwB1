@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/akwb1.dir/Libraries/Graph.cpp.o CMakeFiles/akwb1.dir/main.cpp.o  -o akwb1 

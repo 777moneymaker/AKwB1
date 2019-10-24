@@ -48,5 +48,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/SJP_Graph.dir/DependInfo.cmake"
+  "CMakeFiles/akwb1.dir/DependInfo.cmake"
   )

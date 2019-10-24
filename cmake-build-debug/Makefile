@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SJP_Graph
+# Target rules for targets named akwb1
 
 # Build rule for target.
-SJP_Graph: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 SJP_Graph
-.PHONY : SJP_Graph
+akwb1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 akwb1
+.PHONY : akwb1
 
 # fast build rule for target.
-SJP_Graph/fast:
-	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/build
-.PHONY : SJP_Graph/fast
+akwb1/fast:
+	$(MAKE) -f CMakeFiles/akwb1.dir/build.make CMakeFiles/akwb1.dir/build
+.PHONY : akwb1/fast
 
 Libraries/Graph.o: Libraries/Graph.cpp.o
 
@@ -129,7 +129,7 @@ Libraries/Graph.o: Libraries/Graph.cpp.o
 
 # target to build an object file
 Libraries/Graph.cpp.o:
-	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.o
+	$(MAKE) -f CMakeFiles/akwb1.dir/build.make CMakeFiles/akwb1.dir/Libraries/Graph.cpp.o
 .PHONY : Libraries/Graph.cpp.o
 
 Libraries/Graph.i: Libraries/Graph.cpp.i
@@ -138,7 +138,7 @@ Libraries/Graph.i: Libraries/Graph.cpp.i
 
 # target to preprocess a source file
 Libraries/Graph.cpp.i:
-	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.i
+	$(MAKE) -f CMakeFiles/akwb1.dir/build.make CMakeFiles/akwb1.dir/Libraries/Graph.cpp.i
 .PHONY : Libraries/Graph.cpp.i
 
 Libraries/Graph.s: Libraries/Graph.cpp.s
@@ -147,7 +147,7 @@ Libraries/Graph.s: Libraries/Graph.cpp.s
 
 # target to generate assembly for a file
 Libraries/Graph.cpp.s:
-	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.s
+	$(MAKE) -f CMakeFiles/akwb1.dir/build.make CMakeFiles/akwb1.dir/Libraries/Graph.cpp.s
 .PHONY : Libraries/Graph.cpp.s
 
 main.o: main.cpp.o
@@ -156,7 +156,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/akwb1.dir/build.make CMakeFiles/akwb1.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -165,7 +165,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/akwb1.dir/build.make CMakeFiles/akwb1.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -174,7 +174,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/akwb1.dir/build.make CMakeFiles/akwb1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -184,7 +184,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... SJP_Graph"
+	@echo "... akwb1"
 	@echo "... edit_cache"
 	@echo "... Libraries/Graph.o"
 	@echo "... Libraries/Graph.i"

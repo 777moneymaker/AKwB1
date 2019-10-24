@@ -53,12 +53,12 @@ CMAKE_BINARY_DIR = /home/moneymaker/Desktop/akwb1/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/SJP_Graph.dir/all
+all: CMakeFiles/akwb1.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
-clean: CMakeFiles/SJP_Graph.dir/clean
+clean: CMakeFiles/akwb1.dir/clean
 
 .PHONY : clean
 
@@ -68,31 +68,31 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
-# Target rules for target CMakeFiles/SJP_Graph.dir
+# Target rules for target CMakeFiles/akwb1.dir
 
 # All Build rule for target.
-CMakeFiles/SJP_Graph.dir/all:
-	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/depend
-	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target SJP_Graph"
-.PHONY : CMakeFiles/SJP_Graph.dir/all
+CMakeFiles/akwb1.dir/all:
+	$(MAKE) -f CMakeFiles/akwb1.dir/build.make CMakeFiles/akwb1.dir/depend
+	$(MAKE) -f CMakeFiles/akwb1.dir/build.make CMakeFiles/akwb1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target akwb1"
+.PHONY : CMakeFiles/akwb1.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SJP_Graph.dir/rule: cmake_check_build_system
+CMakeFiles/akwb1.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SJP_Graph.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/akwb1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/SJP_Graph.dir/rule
+.PHONY : CMakeFiles/akwb1.dir/rule
 
 # Convenience name for target.
-SJP_Graph: CMakeFiles/SJP_Graph.dir/rule
+akwb1: CMakeFiles/akwb1.dir/rule
 
-.PHONY : SJP_Graph
+.PHONY : akwb1
 
 # clean rule for target.
-CMakeFiles/SJP_Graph.dir/clean:
-	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/clean
-.PHONY : CMakeFiles/SJP_Graph.dir/clean
+CMakeFiles/akwb1.dir/clean:
+	$(MAKE) -f CMakeFiles/akwb1.dir/build.make CMakeFiles/akwb1.dir/clean
+.PHONY : CMakeFiles/akwb1.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

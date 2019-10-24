@@ -1,6 +1,16 @@
-cmake_minimum_required(VERSION 3.13)
-project(SJP_Graph)
+cmake_minimum_required(VERSION 3.15)
+project(akwb1)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 
-add_executable(SJP_Graph main.cpp Libraries/Graph.cpp Libraries/Graph.h)
+include_directories(Libraries)
+
+add_executable(akwb1
+        cmake-build-debug/graph.txt
+        Libraries/Graph.cpp
+        Libraries/Graph.h
+        Libraries/ProgressBar.hpp
+        LICENSE
+        main.cpp
+        progress_bar_LICENSE
+        README.md)

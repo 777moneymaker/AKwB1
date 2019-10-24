@@ -150,7 +150,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=SJP_Graph
+CMAKE_PROJECT_NAME:STATIC=akwb1
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -222,6 +222,12 @@ SJP_Graph_BINARY_DIR:STATIC=/home/moneymaker/Desktop/akwb1/cmake-build-debug
 
 //Value Computed by CMake
 SJP_Graph_SOURCE_DIR:STATIC=/home/moneymaker/Desktop/akwb1
+
+//Value Computed by CMake
+akwb1_BINARY_DIR:STATIC=/home/moneymaker/Desktop/akwb1/cmake-build-debug
+
+//Value Computed by CMake
+akwb1_SOURCE_DIR:STATIC=/home/moneymaker/Desktop/akwb1
 
 
 ########################
