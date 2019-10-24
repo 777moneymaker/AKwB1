@@ -141,7 +141,7 @@
                         j = 0;
                         val = "0";
                     }
-                    if(stoi(val) != 0) // if number is good then put '1' in the column which the number is pointing
+                    if(stoi(val) not_eq 0) // if number is good then put '1' in the column which the number is pointing
                         this->adj_matrix[i][stoi(val)-1] = 1; // (number - 1, starting from 0)
                 }
             }

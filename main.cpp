@@ -19,7 +19,7 @@ using namespace std;
 int main() {
     srand(time(nullptr));
     string filename; int iters;
-    cout<<"Give the number of vertices between 1..50 : "<<endl;
+    cout<<"Give the number of vertices between 1..50 or type L to just load graph and check: "<<endl;
     try{
         cin >> iters;
         if(not(cin.good()))
@@ -32,7 +32,17 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
-    auto *G = new Graph(iters);
+    int count = 0;
+    for(int i=0;i<1000;i++){
+        auto G = new Graph(7);
+        if(G->isAdjoint()) {
+            count++;
+        }
+        delete G;
+    }
+    cout<<count<<endl;
+
+    /*auto *G = new Graph(iters);
     G->loadGraph();
     if(G->isAdjoint())
         cout<<"Graph is adjoint! "<<endl;
@@ -40,7 +50,7 @@ int main() {
         cout<<"Graph not adjoint"<<endl;
         exit(0);
     }
-    G->printList();
+    G->printList();*/
 
     return 0;
 }
