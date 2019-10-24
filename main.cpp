@@ -33,14 +33,16 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
-    int graphs_to_create = 0;
-    cout<< "Give number of graph |V| = 50 you want to create: "<<endl;
+    int graphs_to_create = 0, graph_size = 0;
+    cout<< "Give number of graphs you want to create: "<<endl;
     cin >> graphs_to_create;
+    cout<< "Give the size of graphs: "<<endl;
+    cin>>graph_size;
 
     ProgressBar progressBar(graphs_to_create, 70);
     int count = 0;
     for(int i=0;i<graphs_to_create;i++){
-        auto G = new Graph(50);
+        auto G = new Graph(graph_size);
         if(G->isAdjoint()) {
             count++;
         }
@@ -59,7 +61,7 @@ int main() {
         cout<<"Graph not adjoint"<<endl;
         exit(0);
     }
-    G->printList();*/
+    G->printList();
 
-    return 0;
+    return 0;*/
 }
