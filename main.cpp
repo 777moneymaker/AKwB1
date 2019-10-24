@@ -19,7 +19,7 @@ using namespace std;
 int main() {
     srand(time(nullptr));
     string filename; int iters;
-    cout<<"Give the number of vertices between 1..50 or type L to just load graph and check: "<<endl;
+    cout<<"Give the number of vertices between 1..50: "<<endl;
     try{
         cin >> iters;
         if(not(cin.good()))
