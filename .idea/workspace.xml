@@ -11,9 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a654cd8a-1551-435a-bac5-5921a25cfc0c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a654cd8a-1551-435a-bac5-5921a25cfc0c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +28,7 @@
   <component name="ProjectId" id="1ST2FVMSIJpawT5wFpKZmbXsOfV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -84,7 +83,7 @@
       <workItem from="1571927827229" duration="3392000" />
       <workItem from="1571932299806" duration="3769000" />
       <workItem from="1571938721647" duration="334000" />
-      <workItem from="1571948075352" duration="2488000" />
+      <workItem from="1571948075352" duration="2769000" />
     </task>
     <servers />
   </component>
