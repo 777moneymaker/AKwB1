@@ -1,4 +1,0 @@
-/snap/clion/88/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/moneymaker/Desktop/akwb1
--- Configuring done
--- Generating done
--- Build files have been written to: /home/moneymaker/Desktop/akwb1/cmake-build-debug
