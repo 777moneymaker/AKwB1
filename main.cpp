@@ -33,9 +33,13 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
-    ProgressBar progressBar(1000:, 70);
+    int graphs_to_create = 0;
+    cout<< "Give number of graph |V| = 50 you want to create: "<<endl;
+    cin >> graphs_to_create;
+
+    ProgressBar progressBar(graphs_to_create, 70);
     int count = 0;
-    for(int i=0;i<1000;i++){
+    for(int i=0;i<graphs_to_create;i++){
         auto G = new Graph(50);
         if(G->isAdjoint()) {
             count++;
@@ -45,7 +49,7 @@ int main() {
         progressBar.display();
     }
     progressBar.done();
-    cout<<count<<endl;
+    cout<<"Number of adjoint graphs = "<<count<<endl;
 
     /*auto *G = new Graph(iters);
     G->loadGraph();
