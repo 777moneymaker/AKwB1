@@ -1,0 +1,3 @@
+/home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles/SJP_Graph.dir
+/home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles/edit_cache.dir
