@@ -22,7 +22,7 @@ int main() {
     cout<<"Give the number of vertices between 1..50 : "<<endl;
     try{
         cin >> iters;
-        if(!cin.good())
+        if(not(cin.good()))
             throw invalid_argument("You can pass only integer type");
         if(iters<1 or iters>50)
             throw invalid_argument("Too low/too high number ");
@@ -33,8 +33,13 @@ int main() {
     }
 
     auto *G = new Graph(iters);
-    //G->saveGraph();
-    //G->loadGraph();
+    G->loadGraph();
+    if(G->isAdjoint())
+        cout<<"Graph is adjoint! "<<endl;
+    else{
+        cout<<"Graph not adjoint"<<endl;
+        exit(0);
+    }
     G->printList();
 
     return 0;

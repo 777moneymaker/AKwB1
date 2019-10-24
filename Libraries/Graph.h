@@ -30,10 +30,6 @@ public:
 
     bool isAdjoint();
 
-    bool compareLists(int first[], int second[]);
-
-    int *findMissing(int first[], int second[], int n, int m);
-
     void createMatrix();
 
     void printMatrix();
@@ -46,9 +42,9 @@ public:
 
     void clearList();
 
-    void addArc(int tail, int head);
+    void addArc(int &tail, int &head);
 
-    void removeArc(int tail, int head);
+    void removeArc(int &tail, int &head);
 
     void saveGraph();
 

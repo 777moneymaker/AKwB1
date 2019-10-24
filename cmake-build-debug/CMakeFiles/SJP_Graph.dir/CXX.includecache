@@ -13,8 +13,6 @@ string
 -
 cstdlib
 -
-random
--
 Graph.h
 /home/moneymaker/Desktop/akwb1/Libraries/Graph.h
 
@@ -29,14 +27,4 @@ fstream
 -
 cstdlib
 -
-
-/home/moneymaker/Desktop/akwb1/main.cpp
-iostream
--
-vector
--
-string
--
-Libraries/Graph.h
-/home/moneymaker/Desktop/akwb1/Libraries/Graph.h
 

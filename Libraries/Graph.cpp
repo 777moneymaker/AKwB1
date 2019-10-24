@@ -12,7 +12,6 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-#include <random>
 #include "Graph.h"
 
 
@@ -22,41 +21,27 @@
         this->createList();
     }
 
-    /*bool Graph::isAdjoint() {
+    bool Graph::isAdjoint() {
      // TODO compare all x,y pairs of Vertices and give result
-        int nv = this->num_of_vert;
+        int nv = this->num_of_vert; int size = 0, common_els = 0;
         bool adjoint_status = true;
         for (int i = 0; i < nv; i++) {
-            for (int j = 0; j < nv; j++) {
-                if (i == j)
-                    continue;
-                if (!this->compareLists(this->adj_list[i], this->adj_list[j]))
-                    adjoint_status = false;
-            }
+            if(this->adj_list[i].size()>1)  // checks if there is any vertex that has any successors
+                for (int j = (i + 1); j < (int)this->adj_list[i].size(); j++)
+                    for(int k = 1; k < (int)this->adj_list[i].size(); k++)
+                        for(int l = 1; l < (int)this->adj_list[i].size(); l++){
+                            if(this->adj_list[i].size() >= this->adj_list[j].size()) // sets the number of our common elements
+                                size = (int)this->adj_list[i].size() - 1;
+                            else if (this->adj_list[i].size() < this->adj_list[j].size()) // sets the number of our common elements as above
+                                size = (int)this->adj_list[j].size() - 1;
+                            if(this->adj_list[i][k] == this->adj_list[j][l]) // if we found common element, then we increment
+                                common_els++;
+                        }
         }
+        if((common_els not_eq size) or (common_els not_eq 0)) // we don't have any common elements
+            adjoint_status = false;                            // or our size is not equal to the size we need
         return adjoint_status;
-    }*/
-    //bool Graph::compareLists(int first[], int second[])
-
-
-
-    /*int *Graph::findMissing(int first[], int second[], int n, int m) {
-     // TODO compare two lists, find elements that are missing
-        int *missing_elements;
-        if(n>m)
-            missing_elements = new int[n];
-        else
-            missing_elements = new int[m];
-        for (int i = 0; i < n; i++){
-            int j;
-            for (j = 0; j < m; j++)
-                if (first[i] == second[j])
-                    break;
-            if (j == m)
-                missing_elements[i] = first[i];
-        }
-        return missing_elements;
-    }*/
+    }
 
     void Graph::createMatrix(){ //creates N^2 size matrix based on number of vertices
         int nv = this->num_of_vert;
@@ -110,11 +95,11 @@
         }
     }
 
-    void Graph::addArc(int tail, int head){
+    void Graph::addArc(int &tail, int &head){
         // TODO test function, upgrade if needed
         this->adj_matrix[tail-1][head-1] = 1;
     }
-    void Graph::removeArc(int tail, int head){
+    void Graph::removeArc(int &tail, int &head){
         // TODO test function, upgrade if needed
         this->adj_matrix[tail-1][head-1] = 0;
     }
