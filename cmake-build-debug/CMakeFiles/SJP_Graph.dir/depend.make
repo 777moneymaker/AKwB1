@@ -3,12 +3,7 @@
 
 CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.o: ../Libraries/Graph.cpp
 CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.o: ../Libraries/Graph.h
-CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.o: ../Libraries/Vertex.h
-
-CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.o: ../Libraries/Vertex.cpp
-CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.o: ../Libraries/Vertex.h
 
 CMakeFiles/SJP_Graph.dir/main.cpp.o: ../Libraries/Graph.h
-CMakeFiles/SJP_Graph.dir/main.cpp.o: ../Libraries/Vertex.h
 CMakeFiles/SJP_Graph.dir/main.cpp.o: ../main.cpp
 

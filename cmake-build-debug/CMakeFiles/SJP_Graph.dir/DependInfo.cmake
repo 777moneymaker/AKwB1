@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/moneymaker/Desktop/akwb1/Libraries/Graph.cpp" "/home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.o"
-  "/home/moneymaker/Desktop/akwb1/Libraries/Vertex.cpp" "/home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.o"
   "/home/moneymaker/Desktop/akwb1/main.cpp" "/home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles/SJP_Graph.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

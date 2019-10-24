@@ -150,33 +150,6 @@ Libraries/Graph.cpp.s:
 	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.s
 .PHONY : Libraries/Graph.cpp.s
 
-Libraries/Vertex.o: Libraries/Vertex.cpp.o
-
-.PHONY : Libraries/Vertex.o
-
-# target to build an object file
-Libraries/Vertex.cpp.o:
-	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.o
-.PHONY : Libraries/Vertex.cpp.o
-
-Libraries/Vertex.i: Libraries/Vertex.cpp.i
-
-.PHONY : Libraries/Vertex.i
-
-# target to preprocess a source file
-Libraries/Vertex.cpp.i:
-	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.i
-.PHONY : Libraries/Vertex.cpp.i
-
-Libraries/Vertex.s: Libraries/Vertex.cpp.s
-
-.PHONY : Libraries/Vertex.s
-
-# target to generate assembly for a file
-Libraries/Vertex.cpp.s:
-	$(MAKE) -f CMakeFiles/SJP_Graph.dir/build.make CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.s
-.PHONY : Libraries/Vertex.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -216,9 +189,6 @@ help:
 	@echo "... Libraries/Graph.o"
 	@echo "... Libraries/Graph.i"
 	@echo "... Libraries/Graph.s"
-	@echo "... Libraries/Vertex.o"
-	@echo "... Libraries/Vertex.i"
-	@echo "... Libraries/Vertex.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

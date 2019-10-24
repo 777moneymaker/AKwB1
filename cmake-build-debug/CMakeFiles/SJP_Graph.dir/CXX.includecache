@@ -13,24 +13,12 @@ string
 -
 cstdlib
 -
+random
+-
 Graph.h
 /home/moneymaker/Desktop/akwb1/Libraries/Graph.h
 
 /home/moneymaker/Desktop/akwb1/Libraries/Graph.h
-iostream
--
-vector
--
-string
--
-fstream
--
-cstdlib
--
-Vertex.h
-/home/moneymaker/Desktop/akwb1/Libraries/Vertex.h
-
-/home/moneymaker/Desktop/akwb1/Libraries/Vertex.h
 iostream
 -
 vector

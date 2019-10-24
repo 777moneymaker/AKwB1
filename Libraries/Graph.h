@@ -17,7 +17,6 @@
 #include <string>
 #include <fstream>
 #include <cstdlib>
-#include "Vertex.h"
 
 using namespace std;
 
@@ -25,9 +24,15 @@ class Graph{
 public:
     int num_of_vert = 0;
     int adj_matrix[50][50] = {0};
-    int adj_list[50][50] = {0};
+    vector<int> adj_list[50];
 
-    Graph(int nv=5);
+    explicit Graph(int nv=5);
+
+    bool isAdjoint();
+
+    bool compareLists(int first[], int second[]);
+
+    int *findMissing(int first[], int second[], int n, int m);
 
     void createMatrix();
 

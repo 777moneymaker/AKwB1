@@ -17,16 +17,25 @@
 using namespace std;
 
 int main() {
-    string filename; string iters;
-    cout<<"Give the number of vertices: "<<endl;
-    cin >> iters;
-    auto *G = new Graph(stoi(iters));
-    G->printMatrix();
+    srand(time(nullptr));
+    string filename; int iters;
+    cout<<"Give the number of vertices between 1..50 : "<<endl;
+    try{
+        cin >> iters;
+        if(!cin.good())
+            throw invalid_argument("You can pass only integer type");
+        if(iters<1 or iters>50)
+            throw invalid_argument("Too low/too high number ");
+
+    }catch(exception &e) {
+        cerr << e.what();
+        exit(EXIT_FAILURE);
+    }
+
+    auto *G = new Graph(iters);
+    //G->saveGraph();
+    //G->loadGraph();
     G->printList();
-    G->loadGraph();
-    G->printMatrix();
-    G->printList();
-    
 
     return 0;
 }

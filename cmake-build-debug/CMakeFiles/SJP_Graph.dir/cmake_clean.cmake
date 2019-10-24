@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.o"
-  "CMakeFiles/SJP_Graph.dir/Libraries/Vertex.cpp.o"
   "CMakeFiles/SJP_Graph.dir/main.cpp.o"
   "SJP_Graph"
   "SJP_Graph.pdb"
