@@ -12,6 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a654cd8a-1551-435a-bac5-5921a25cfc0c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SJP_Graph.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SJP_Graph.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SJP_Graph.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SJP_Graph.dir/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/SJP_Graph" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/SJP_Graph" afterDir="false" />
@@ -87,7 +88,7 @@
       <workItem from="1571927827229" duration="3392000" />
       <workItem from="1571932299806" duration="3769000" />
       <workItem from="1571938721647" duration="334000" />
-      <workItem from="1571948075352" duration="344000" />
+      <workItem from="1571948075352" duration="1604000" />
     </task>
     <servers />
   </component>

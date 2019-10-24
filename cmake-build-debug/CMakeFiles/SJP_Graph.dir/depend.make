@@ -5,5 +5,6 @@ CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.o: ../Libraries/Graph.cpp
 CMakeFiles/SJP_Graph.dir/Libraries/Graph.cpp.o: ../Libraries/Graph.h
 
 CMakeFiles/SJP_Graph.dir/main.cpp.o: ../Libraries/Graph.h
+CMakeFiles/SJP_Graph.dir/main.cpp.o: ../Libraries/ProgressBar.hpp
 CMakeFiles/SJP_Graph.dir/main.cpp.o: ../main.cpp
 

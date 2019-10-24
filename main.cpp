@@ -13,6 +13,7 @@
 #include <vector>
 #include <string>
 #include "Libraries/Graph.h"
+#include "Libraries/ProgressBar.hpp"
 
 using namespace std;
 
@@ -32,14 +33,18 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
+    ProgressBar progressBar(1000, 70);
     int count = 0;
     for(int i=0;i<1000;i++){
-        auto G = new Graph(7);
+        auto G = new Graph(50);
         if(G->isAdjoint()) {
             count++;
         }
         delete G;
+        ++progressBar;
+        progressBar.display();
     }
+    progressBar.done();
     cout<<count<<endl;
 
     /*auto *G = new Graph(iters);
