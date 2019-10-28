@@ -33,6 +33,19 @@ int main() {
         exit(EXIT_FAILURE);
     }
 
+    auto *G = new Graph(iters);
+    G->loadGraph();
+    G->printMatrix();
+    G->printList();
+    G->printPredList();
+    G->getAdjointStatus();
+    G->getLineStatus();
+
+    // =========================
+    // CODE BELOW IS A TEST CODE
+    // =========================
+
+    /*
     int graphs_to_create = 0, graph_size = 0;
     cout<< "Give number of graphs you want to create: "<<endl;
     cin >> graphs_to_create;
@@ -52,16 +65,7 @@ int main() {
     }
     progressBar.done();
     cout<<"Number of adjoint graphs = "<<count<<endl;
+    */
 
-    /*auto *G = new Graph(iters);
-    G->loadGraph();
-    if(G->isAdjoint())
-        cout<<"Graph is adjoint! "<<endl;
-    else{
-        cout<<"Graph not adjoint"<<endl;
-        exit(0);
-    }
-    G->printList();
-
-    return 0;*/
+    return 0;
 }

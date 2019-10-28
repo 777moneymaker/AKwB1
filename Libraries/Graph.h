@@ -21,14 +21,22 @@
 using namespace std;
 
 class Graph{
-public:
+private:
     int num_of_vert = 0;
     int adj_matrix[50][50] = {0};
     vector<int> adj_list[50];
-
+    vector<int> pred_list[50];
+    bool adjoint_status = true;
+    bool line_status = true;
+    bool multigraph_status = false;
+    void isAdjoint();
+    void isLine();
+public:
     explicit Graph(int nv=5);
 
-    bool isAdjoint();
+    void getAdjointStatus();
+
+    void getLineStatus();
 
     void createMatrix();
 
@@ -38,9 +46,15 @@ public:
 
     void createList();
 
+    void createPredList();
+
     void printList();
 
+    void printPredList();
+
     void clearList();
+
+    void clearPredList();
 
     void addArc(int &tail, int &head);
 
