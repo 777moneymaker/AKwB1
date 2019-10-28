@@ -8,7 +8,7 @@ include_directories(Libraries)
 add_executable(akwb1
         cmake-build-debug/graph.txt
         Libraries/Graph.cpp
-        Libraries/Graph.h
+        Libraries/Graph.hpp
         Libraries/ProgressBar.hpp
         LICENSE
         main.cpp

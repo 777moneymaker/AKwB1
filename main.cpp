@@ -12,7 +12,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "Libraries/Graph.h"
+#include "Graph.hpp"
 #include "Libraries/ProgressBar.hpp"
 
 using namespace std;

@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/home/moneymaker/Desktop/akwb1/Libraries/Graph.cpp
+iostream
+-
+string
+-
+cstdlib
+-
+Graph.h
+/home/moneymaker/Desktop/akwb1/Libraries/Graph.h
+
 /home/moneymaker/Desktop/akwb1/Libraries/Graph.h
 iostream
 -

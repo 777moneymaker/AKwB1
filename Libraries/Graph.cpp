@@ -12,7 +12,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-#include "Graph.h"
+#include "Graph.hpp"
 
 
     Graph::Graph(int nv){
