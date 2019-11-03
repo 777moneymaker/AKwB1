@@ -20,13 +20,13 @@ using namespace std;
 int main(){
    srand(time(nullptr));
    string filename;
-   int iters;
+   int num_of_vert;
    cout << "Give the number of vertices between 1..50: " << endl;
    try{
-      cin >> iters;
+      cin >> num_of_vert;
       if(not(cin.good()))
          throw invalid_argument("You can pass only integer type");
-      if(iters < 1 or iters > 50)
+      if(num_of_vert < 1 or num_of_vert > 50)
          throw invalid_argument("Too low/too high number ");
 
    } catch(exception &e){
@@ -34,13 +34,12 @@ int main(){
       exit(EXIT_FAILURE);
    }
 
-   auto *G = new Graph(iters);
+   auto *G = new Graph(num_of_vert);
    G->loadGraph();
    G->printMatrix();
    G->printList();
    G->printPredList();
-   G->getAdjointStatus();
-   G->getLineStatus();
+   G->getStatus();
 
    // =========================
    // CODE BELOW IS A TEST CODE

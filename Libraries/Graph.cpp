@@ -31,7 +31,6 @@ bool Graph::doesHaveAnyPred(const vector<int> &first, const vector<int> &second)
 
 }
 
-
 void Graph::isAdjoint(){
    if(this->multigraph_status){
       this->adjoint_status = false;
@@ -86,21 +85,19 @@ void Graph::isLine(){
 
 }
 
-void Graph::getAdjointStatus(){
+void Graph::getStatus(){
    this->isAdjoint();
+   this->isLine();
    if(this->adjoint_status)
       cout << "Graph is adjoint" << endl;
    else
       cout << "Graph is not adjoint" << endl;
-}
-
-void Graph::getLineStatus(){
-   this->isLine();
    if(this->line_status)
       cout << "Graph is line graph" << endl;
    else
       cout << "Graph is not line graph" << endl;
 }
+
 
 void Graph::createMatrix(){ //creates N^2 size matrix based on number of vertices
    int nv = this->num_of_vert;
@@ -189,19 +186,6 @@ void Graph::clearPredList(){
    }
 }
 
-void Graph::addArc(const int &tail, const int &head){
-   // TODO test function, upgrade if needed
-   this->adj_matrix[tail - 1][head - 1] += 1;
-   this->createList();
-   this->createPredList();
-}
-
-void Graph::removeArc(const int &tail, const int &head){
-   // TODO test function, upgrade if needed
-   this->adj_matrix[tail - 1][head - 1] -= 1;
-   this->createList();
-   this->createPredList();
-}
 
 void Graph::saveGraph(){
    fstream file;

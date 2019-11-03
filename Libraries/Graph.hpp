@@ -36,34 +36,28 @@ private:
 
    bool doesHaveAnyPred(const vector<int> &first, const vector<int> &second);
 
-public:
-   explicit Graph(int nv = 5);
+   void clearList();
 
-   void getAdjointStatus();
-
-   void getLineStatus();
-
-   void createMatrix();
-
-   void printMatrix();
-
-   void clearMatrix();
+   void clearPredList();
 
    void createList();
 
    void createPredList();
 
+   void clearMatrix();
+
+public:
+   explicit Graph(int nv = 5);
+
+   void getStatus();
+
+   void createMatrix();
+
+   void printMatrix();
+
    void printList();
 
    void printPredList();
-
-   void clearList();
-
-   void clearPredList();
-
-   void addArc(const int &tail, const int &head);
-
-   void removeArc(const int &tail, const int &head);
 
    void saveGraph();
 
