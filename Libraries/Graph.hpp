@@ -22,47 +22,52 @@ using namespace std;
 
 class Graph{
 private:
-    int num_of_vert = 0;
-    int adj_matrix[50][50] = {0};
-    vector<int> adj_list[50];
-    vector<int> pred_list[50];
-    bool adjoint_status = true;
-    bool line_status = true;
-    bool multigraph_status = false;
-    void isAdjoint();
-    void isLine();
+   int num_of_vert = 0;
+   int adj_matrix[50][50] = {0};
+   vector<int> adj_list[50];
+   vector<int> pred_list[50];
+   bool adjoint_status = true;
+   bool line_status = true;
+   bool multigraph_status = false;
+
+   void isAdjoint();
+
+   void isLine();
+
+   bool doesHaveAnyPred(const vector<int> &first, const vector<int> &second);
+
 public:
-    explicit Graph(int nv=5);
+   explicit Graph(int nv = 5);
 
-    void getAdjointStatus();
+   void getAdjointStatus();
 
-    void getLineStatus();
+   void getLineStatus();
 
-    void createMatrix();
+   void createMatrix();
 
-    void printMatrix();
+   void printMatrix();
 
-    void clearMatrix();
+   void clearMatrix();
 
-    void createList();
+   void createList();
 
-    void createPredList();
+   void createPredList();
 
-    void printList();
+   void printList();
 
-    void printPredList();
+   void printPredList();
 
-    void clearList();
+   void clearList();
 
-    void clearPredList();
+   void clearPredList();
 
-    void addArc(int &tail, int &head);
+   void addArc(const int &tail, const int &head);
 
-    void removeArc(int &tail, int &head);
+   void removeArc(const int &tail, const int &head);
 
-    void saveGraph();
+   void saveGraph();
 
-    void loadGraph();
+   void loadGraph();
 };
 
 

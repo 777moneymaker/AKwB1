@@ -3,8 +3,8 @@
 
 CMakeFiles/akwb1.dir/Libraries/Graph.cpp.o
  /home/moneymaker/Desktop/akwb1/Libraries/Graph.cpp
- /home/moneymaker/Desktop/akwb1/Libraries/Graph.h
+ /home/moneymaker/Desktop/akwb1/Libraries/Graph.hpp
 CMakeFiles/akwb1.dir/main.cpp.o
- /home/moneymaker/Desktop/akwb1/Libraries/Graph.h
+ ../Libraries/Graph.hpp
  /home/moneymaker/Desktop/akwb1/Libraries/ProgressBar.hpp
  /home/moneymaker/Desktop/akwb1/main.cpp

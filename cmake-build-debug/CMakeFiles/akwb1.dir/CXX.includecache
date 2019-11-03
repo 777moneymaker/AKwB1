@@ -13,10 +13,10 @@ string
 -
 cstdlib
 -
-Graph.h
-/home/moneymaker/Desktop/akwb1/Libraries/Graph.h
+Graph.hpp
+/home/moneymaker/Desktop/akwb1/Libraries/Graph.hpp
 
-/home/moneymaker/Desktop/akwb1/Libraries/Graph.h
+/home/moneymaker/Desktop/akwb1/Libraries/Graph.hpp
 iostream
 -
 vector
@@ -27,22 +27,4 @@ fstream
 -
 cstdlib
 -
-
-/home/moneymaker/Desktop/akwb1/Libraries/ProgressBar.hpp
-chrono
--
-iostream
--
-
-/home/moneymaker/Desktop/akwb1/main.cpp
-iostream
--
-vector
--
-string
--
-Libraries/Graph.h
-/home/moneymaker/Desktop/akwb1/Libraries/Graph.h
-Libraries/ProgressBar.hpp
-/home/moneymaker/Desktop/akwb1/Libraries/ProgressBar.hpp
 
