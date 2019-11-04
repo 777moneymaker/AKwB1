@@ -28,13 +28,12 @@ bool Graph::doesHaveAnyPred(const vector<int> &first, const vector<int> &second)
          if(k == l)
             return true;
    return false;
-
 }
 
 void Graph::isAdjoint(){
    if(this->multigraph_status){
       this->adjoint_status = false;
-      return;
+      return void();
    }
    int nv = this->num_of_vert;
    int size = 0, common_els = 0;
@@ -52,38 +51,52 @@ void Graph::isAdjoint(){
                      common_els++;
                }
             }
+            // graph not adjoint
             if((common_els not_eq size) and
-               (common_els not_eq 0)){ // or our size is not equal to the size we need and we dont h
+               (common_els not_eq 0)){
                this->adjoint_status = false;
-               return;
+               return void();
             }
          }
    }
-   return;
+   return void();
 }
 
 void Graph::isLine(){
    int nv = this->num_of_vert;
+   int size = 0, common_els = 0;
    if(this->adjoint_status){ // if graph is not adjoint, then it's not line graph
-      for(int i = 0; i < nv; i++)
-         for(int j = (i + 1); j < nv; j++)
-            for(int k = 0; k < (int)this->adj_list[i].size(); k++)
-               for(int l = 0; l < (int)this->adj_list[j].size(); l++)
+      for(int i = 0; i < nv; i++){
+         for(int j = (i + 1); j < nv; j++){
+            common_els = 0;
+            for(int k = 0; k < (int)this->adj_list[i].size(); k++){
+               for(int l = 0; l < (int)this->adj_list[j].size(); l++){
+                  if(this->adj_list[i].size() >= this->adj_list[j].size()) // sets the number of our common elements
+                     size = (int)this->adj_list[i].size();
+                  else                                                     // sets the number of our common elements
+                     size = (int)this->adj_list[j].size();
                   if(this->adj_list[i][k] == this->adj_list[j][l]){
-                     /*If we find a common successor, then we must compare list of predecessors for both of it's vertices.
-                     Then if we find any common predecessor, then we know that graph is not line graph*/
-                     if(this->doesHaveAnyPred(this->pred_list[i], this->pred_list[j])){
-                        this->line_status = false;
-                        return;
-                     }
+                     common_els++;  // if we found common element, then we increment
                   }
+               }
+            }
+            if((common_els == size) or (common_els == 0)){ // if graph is adjoint (negation of line 55)
 
+               /*If we find a common successors, then we must compare list of predecessors for both of it's vertices.
+               Then if we find any common predecessor, we know that graph is not line graph*/
+               if(this->doesHaveAnyPred(this->pred_list[i], this->pred_list[j])){
+                  this->line_status = false;
+                  return void();
+               }
+            }
+         }
+      }
    }else{
       this->line_status = false;
    }
-   return;
-
+   return void();
 }
+
 
 void Graph::getStatus(){
    this->isAdjoint();
@@ -96,6 +109,7 @@ void Graph::getStatus(){
       cout << "Graph is line graph" << endl;
    else
       cout << "Graph is not line graph" << endl;
+   return void();
 }
 
 
@@ -104,6 +118,7 @@ void Graph::createMatrix(){ //creates N^2 size matrix based on number of vertice
    for(int i = 0; i < nv; i++)
       for(int j = 0; j < nv; j++)
          this->adj_matrix[i][j] = (int)random() % 2; // randomize matrix/create random graph
+   return void();
 }
 
 void Graph::printMatrix(){
@@ -114,6 +129,7 @@ void Graph::printMatrix(){
          cout << this->adj_matrix[i][j] << " ";
       cout << endl;
    }
+   return void();
 }
 
 void Graph::clearMatrix(){ // sets whole matrix to '0'
@@ -121,6 +137,7 @@ void Graph::clearMatrix(){ // sets whole matrix to '0'
    for(int i = 0; i < nv; i++)
       for(int j = 0; j < nv; j++)
          this->adj_matrix[i][j] = 0;
+   return void();
 }
 
 void Graph::createList(){ // creates list that is based on indexes of adjacency matrix
@@ -138,6 +155,7 @@ void Graph::createList(){ // creates list that is based on indexes of adjacency 
             }
          }
       }
+   return void();
 }
 
 void Graph::createPredList(){
@@ -148,6 +166,7 @@ void Graph::createPredList(){
          if(this->adj_matrix[i][j] >= 1)
             this->pred_list[j].push_back(i + 1); // pushes index of current column + 1 (current vertex)
       }
+   return void();
 }
 
 void Graph::printList(){
@@ -159,6 +178,7 @@ void Graph::printList(){
          cout << "-> " << this->adj_list[i][j];
       cout << endl;
    }
+   return void();
 }
 
 void Graph::printPredList(){
@@ -166,10 +186,11 @@ void Graph::printPredList(){
    cout << endl << "Predecessors" << endl;
    for(int i = 0; i < nv; i++){
       cout << i + 1 << ":";
-      for(auto j = 0; j < (int)this->pred_list[i].size(); j++)
-         cout << "-> " << this->pred_list[i][j];
+      for(auto j : this->pred_list[i])
+         cout << "-> " << j;
       cout << endl;
    }
+   return void();
 }
 
 void Graph::clearList(){ //resets list to be empty
@@ -177,6 +198,7 @@ void Graph::clearList(){ //resets list to be empty
       this->adj_list[i].resize(1);
       this->adj_list[i].clear();
    }
+   return void();
 }
 
 void Graph::clearPredList(){
@@ -184,6 +206,7 @@ void Graph::clearPredList(){
       this->pred_list[i].resize(1);
       this->pred_list[i].clear();
    }
+   return void();
 }
 
 
@@ -207,6 +230,7 @@ void Graph::saveGraph(){
    }else{
       cout << "Error while opening the file" << endl;
    }
+   return void();
 }
 
 void Graph::loadGraph(){
@@ -237,6 +261,7 @@ void Graph::loadGraph(){
    }else{
       cout << "Error while opening the file" << endl;
    }
+   return void();
 }
 
 

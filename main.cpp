@@ -40,6 +40,7 @@ int main(){
    G->printList();
    G->printPredList();
    G->getStatus();
+   delete G;
 
    // =========================
    // CODE BELOW IS A TEST CODE
