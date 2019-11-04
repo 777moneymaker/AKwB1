@@ -51,7 +51,7 @@ void Graph::isAdjoint(){
                      common_els++;
                }
             }
-            // graph not adjoint
+            // graph not adjoint; common elements for two vertices are not equal and this is not empty set
             if((common_els not_eq size) and
                (common_els not_eq 0)){
                this->adjoint_status = false;
@@ -80,7 +80,7 @@ void Graph::isLine(){
                   }
                }
             }
-            if((common_els == size) or (common_els == 0)){ // if graph is adjoint (negation of line 55)
+            if((common_els == size) or (common_els == 0)){ // if common elements for two vertices are equal or if this is an empty set
 
                /*If we find a common successors, then we must compare list of predecessors for both of it's vertices.
                Then if we find any common predecessor, we know that graph is not line graph*/
