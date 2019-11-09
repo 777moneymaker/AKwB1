@@ -24,52 +24,39 @@ class Graph{
 private:
    int num_of_vert = 0;
    int adj_matrix[50][50] = {0};
-   vector<int> adj_list[50];
-   vector<vector<int> > original_list;
-   vector<int> pred_list[50];
-   vector<vector<int> > edge_list;
+
    bool adjoint_status = true;
    bool line_status = true;
    bool multigraph_status = false;
 
+   vector<int> adj_list[50];
+   vector<vector<int> > original_list;
+   vector<int> pred_list[50];
+   vector<vector<int> > edge_list;
+
    bool doesHaveAnyPred(const vector<int> &first, const vector<int> &second);
 
-
    void clearList();
-
    void clearPredList();
-
    void createList();
-
    void createPredList();
-
    void clearMatrix();
 
 public:
    explicit Graph(int nv = 5);
 
-   void transformToOriginal();
-
    bool getAdjointStatus();
-
    bool getLineStatus();
 
+   void transformToOriginal();
    void printOriginalList();
-
    void isAdjoint();
-
    void isLine();
-
    void createMatrix();
-
    void printMatrix();
-
    void printList();
-
    void printPredList();
-
    void saveOriginalGraph();
-
    void loadGraph();
 };
 

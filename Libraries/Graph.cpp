@@ -15,12 +15,25 @@
 #include <algorithm>
 #include "Graph.hpp"
 
-
 Graph::Graph(int nv){
    this->num_of_vert = nv;
    this->createMatrix();
    this->createList();
    this->createPredList();
+}
+
+bool Graph::getAdjointStatus(){
+   return this->adjoint_status;
+}
+bool Graph::getLineStatus(){
+   return this->line_status;
+}
+bool Graph::doesHaveAnyPred(const vector<int> &first, const vector<int> &second){
+   for(auto k : first)
+      for(auto l : second) // we found common predecessor. Graph is not line graph
+         if(k == l)
+            return true;
+   return false;
 }
 
 void Graph::printOriginalList(){
@@ -35,7 +48,6 @@ void Graph::printOriginalList(){
       cout << endl;
    }
 }
-
 void Graph::transformToOriginal(){
    if(not(this->adjoint_status)){
       //cout<< "Can't transform Graph that is not adjoint!"<< endl;
@@ -75,15 +87,6 @@ void Graph::transformToOriginal(){
       this->original_list[this->edge_list[i][0]].push_back(this->edge_list[i][1]);
    }
 }
-
-bool Graph::doesHaveAnyPred(const vector<int> &first, const vector<int> &second){
-   for(auto k : first)
-      for(auto l : second) // we found common predecessor. Graph is not line graph
-         if(k == l)
-            return true;
-   return false;
-}
-
 void Graph::isAdjoint(){
    if(this->multigraph_status){
       this->adjoint_status = false;
@@ -115,7 +118,6 @@ void Graph::isAdjoint(){
    }
    return void();
 }
-
 void Graph::isLine(){
    int nv = this->num_of_vert;
    int size = 0, common_els = 0;
@@ -152,16 +154,6 @@ void Graph::isLine(){
    }
    return void();
 }
-
-
-bool Graph::getAdjointStatus(){
-   return this->adjoint_status;
-}
-
-bool Graph::getLineStatus(){
-   return this->line_status;
-}
-
 void Graph::createMatrix(){ //creates N^2 size matrix based on number of vertices
    int nv = this->num_of_vert;
    for(int i = 0; i < nv; i++)
@@ -169,7 +161,6 @@ void Graph::createMatrix(){ //creates N^2 size matrix based on number of vertice
          this->adj_matrix[i][j] = (int)random() % 2; // randomize matrix/create random graph
    return void();
 }
-
 void Graph::printMatrix(){
    int nv = this->num_of_vert;
    cout << "Number of vertices " << nv << endl;
@@ -180,7 +171,6 @@ void Graph::printMatrix(){
    }
    return void();
 }
-
 void Graph::clearMatrix(){ // sets whole matrix to '0'
    int nv = this->num_of_vert;
    for(int i = 0; i < nv; i++)
@@ -188,7 +178,6 @@ void Graph::clearMatrix(){ // sets whole matrix to '0'
          this->adj_matrix[i][j] = 0;
    return void();
 }
-
 void Graph::createList(){ // creates list that is based on indexes of adjacency matrix
    int nv = this->num_of_vert;
    this->clearList();
@@ -206,7 +195,6 @@ void Graph::createList(){ // creates list that is based on indexes of adjacency 
       }
    return void();
 }
-
 void Graph::createPredList(){
    int nv = this->num_of_vert;
    this->clearPredList();
@@ -217,7 +205,6 @@ void Graph::createPredList(){
       }
    return void();
 }
-
 void Graph::printList(){
    int nv = this->num_of_vert;
    cout << endl << "Successors" << endl;
@@ -229,7 +216,6 @@ void Graph::printList(){
    }
    return void();
 }
-
 void Graph::printPredList(){
    int nv = this->num_of_vert;
    cout << endl << "Predecessors" << endl;
@@ -241,7 +227,6 @@ void Graph::printPredList(){
    }
    return void();
 }
-
 void Graph::clearList(){ //resets list to be empty
    for(auto &vec : this->adj_list){
       vec.resize(1);
@@ -249,7 +234,6 @@ void Graph::clearList(){ //resets list to be empty
    }
    return void();
 }
-
 void Graph::clearPredList(){
    for(auto &vec : this->pred_list){
       vec.resize(1);
@@ -257,8 +241,6 @@ void Graph::clearPredList(){
    }
    return void();
 }
-
-
 void Graph::saveOriginalGraph(){
    if(not(this->adjoint_status))
       return;
@@ -285,7 +267,6 @@ void Graph::saveOriginalGraph(){
    }
    return void();
 }
-
 void Graph::loadGraph(){
    string val;
    int nv = this->num_of_vert;
