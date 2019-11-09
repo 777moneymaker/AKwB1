@@ -12,6 +12,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <algorithm>
 #include "Graph.hpp"
 
 
@@ -20,6 +21,59 @@ Graph::Graph(int nv){
    this->createMatrix();
    this->createList();
    this->createPredList();
+}
+
+void Graph::printOriginalList(){
+   //this->createOriginalList();
+   cout << "Original Graph: "<<endl;
+   for(const auto &i : this->original_list){
+      if(i.empty())
+         continue;
+      for(const int &j: i){
+         cout<< j << ' ';
+      }
+      cout << endl;
+   }
+}
+
+void Graph::transformToOriginal(){
+   if(not(this->adjoint_status)){
+      //cout<< "Can't transform Graph that is not adjoint!"<< endl;
+      return;
+   }
+   int nv = this->num_of_vert; int new_vertex = 1;
+   // build a graph with additional vertices
+   for(int i = 0; i < nv; i++){
+      this->edge_list.emplace_back(vector<int>());
+      for(int j = 0; j < 2; j++, new_vertex++){
+         this->edge_list[i].push_back(new_vertex);
+      }
+   }
+   // transform graph
+   for (int i = 0; i < nv; i++){
+      for (int j = 0; j < (int)adj_list[i].size(); j++){
+         int edge = this->adj_list[i][j] - 1;
+         if (this->edge_list[i][1] < this->edge_list[edge][0])
+           this->edge_list[edge][0] = this->edge_list[i][1];
+         else
+            this->edge_list[i][1] = this->edge_list[edge][0];
+      }
+   }
+   // calculate what will be the max value of vectors that we need to emplace back
+   auto max = *max_element(begin(this->edge_list[0]), end(this->edge_list[0]));
+   for(int i=0; i<this->edge_list.size(); i++){
+      auto temp_max = *max_element(begin(this->edge_list[i]), end(this->edge_list[i]));
+      if(temp_max > max)
+         max = temp_max;
+   }
+   // create original_list from list of edges
+   for(int i = 0; i < max+1; i++){
+      this->original_list.emplace_back(vector<int>());
+      this->original_list[i].resize(0);
+   }
+   for(int i = 0; i < edge_list.size(); i++){
+      this->original_list[this->edge_list[i][0]].push_back(this->edge_list[i][1]);
+   }
 }
 
 bool Graph::doesHaveAnyPred(const vector<int> &first, const vector<int> &second){
@@ -84,7 +138,9 @@ void Graph::isLine(){
 
                /*If we find a common successors, then we must compare list of predecessors for both of it's vertices.
                Then if we find any common predecessor, we know that graph is not line graph*/
-               if(this->doesHaveAnyPred(this->pred_list[i], this->pred_list[j])){
+
+               bool status = this->doesHaveAnyPred(this->pred_list[i], this->pred_list[j]);
+               if(status){
                   this->line_status = false;
                   return void();
                }
@@ -98,20 +154,13 @@ void Graph::isLine(){
 }
 
 
-void Graph::getStatus(){
-   this->isAdjoint();
-   this->isLine();
-   if(this->adjoint_status)
-      cout << "Graph is adjoint" << endl;
-   else
-      cout << "Graph is not adjoint" << endl;
-   if(this->line_status)
-      cout << "Graph is line graph" << endl;
-   else
-      cout << "Graph is not line graph" << endl;
-   return void();
+bool Graph::getAdjointStatus(){
+   return this->adjoint_status;
 }
 
+bool Graph::getLineStatus(){
+   return this->line_status;
+}
 
 void Graph::createMatrix(){ //creates N^2 size matrix based on number of vertices
    int nv = this->num_of_vert;
@@ -174,7 +223,7 @@ void Graph::printList(){
    cout << endl << "Successors" << endl;
    for(int i = 0; i < nv; i++){
       cout << i + 1 << ":";
-      for(int j = 0; j < adj_list[i].size(); j++)
+      for(int j = 0; j < (int)adj_list[i].size(); j++)
          cout << "-> " << this->adj_list[i][j];
       cout << endl;
    }
@@ -194,37 +243,41 @@ void Graph::printPredList(){
 }
 
 void Graph::clearList(){ //resets list to be empty
-   for(int i = 0; i < 50; i++){
-      this->adj_list[i].resize(1);
-      this->adj_list[i].clear();
+   for(auto &vec : this->adj_list){
+      vec.resize(1);
+      vec.clear();
    }
    return void();
 }
 
 void Graph::clearPredList(){
-   for(int i = 0; i < 50; i++){
-      this->pred_list[i].resize(1);
-      this->pred_list[i].clear();
+   for(auto &vec : this->pred_list){
+      vec.resize(1);
+      vec.clear();
    }
    return void();
 }
 
 
-void Graph::saveGraph(){
-   fstream file;
-   int nv = this->num_of_vert;
-   file.open("graph.txt", ios::out);
+void Graph::saveOriginalGraph(){
+   if(not(this->adjoint_status))
+      return;
+   int nv_counter = 0;
+   for(auto &i : this->original_list)
+      if(not(i.empty()))
+         nv_counter++;
+   fstream file; file.open("graph_original.txt");
+   int nv = nv_counter;
    if(file.good()){
       file.clear();
       file << nv << endl; //read first line which is our number of vertices
-      for(int i = 0; i < nv; i++){
-         for(int j = 0; j < nv; j++){
-            if(this->adj_matrix[i][j] == 1) // if our column for current vertex is == 1,
-               file << j + 1 << " ";        // then saves it as our vertex
-            if(j == (this->num_of_vert - 1)) // if at end of columns-
-               file << "/";                  // set end of adj list for this vertex
+      for(auto &i : this->original_list){
+         if(i.empty())
+            continue;
+         for(auto &j : i){
+            file << j << ' ';
          }
-         file << endl;
+         file << "/" << endl;
       }
       file.close();
    }else{

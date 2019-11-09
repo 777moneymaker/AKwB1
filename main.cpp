@@ -34,39 +34,46 @@ int main(){
       exit(EXIT_FAILURE);
    }
 
-   auto *G = new Graph(num_of_vert);
+   auto *G = new Graph();
    G->loadGraph();
-   G->printMatrix();
    G->printList();
    G->printPredList();
-   G->getStatus();
-   delete G;
+   G->isAdjoint();
+   G->isLine();
+   if(G->getAdjointStatus())
+      cout<<"Graph is adjoint;"<<endl;
+   else
+      cout<<"Graph is not adjoint;"<<endl;
+   if(G->getLineStatus())
+      cout<<"Graph is line graph;"<<endl;
+   else
+      cout<<"Graph is not line graph;"<<endl;
+   G->transformToOriginal();
+   G->printOriginalList();
+   G->saveOriginalGraph();
 
-   // =========================
-   // CODE BELOW IS A TEST CODE
-   // =========================
-
-   /*
-   int graphs_to_create = 0, graph_size = 0;
-   cout<< "Give number of graphs you want to create: "<<endl;
-   cin >> graphs_to_create;
-   cout<< "Give the size of graphs: "<<endl;
-   cin>>graph_size;
-
-   ProgressBar progressBar(graphs_to_create, 70);
-   int count = 0;
-   for(int i=0;i<graphs_to_create;i++){
-       auto G = new Graph(graph_size);
-       if(G->isAdjoint()) {
-           count++;
-       }
-       delete G;
-       ++progressBar;
-       progressBar.display();
+   /*ProgressBar progressBar(100000, 100); int adj_counter = 0, line_counter = 0;
+   for(int i=0; i<100000;i++){
+      auto *G = new Graph(2);
+      //G->printMatrix();
+      //G->printList();
+      //G->printPredList();
+      G->isAdjoint();
+      G->isLine();
+      if(G->getAdjointStatus())
+         adj_counter++;
+      if(G->getLineStatus())
+         line_counter++;
+      G->transformToOriginal();
+      //G->printOriginalList();
+      //G->saveOriginalGraph();
+      delete G;
+      ++progressBar;
+      progressBar.display();
    }
    progressBar.done();
-   cout<<"Number of adjoint graphs = "<<count<<endl;
-   */
+   cout<< endl<< adj_counter << line_counter<<endl;
+    */
 
    return 0;
 }
