@@ -13,6 +13,7 @@
 #include <string>
 #include <cstdlib>
 #include <algorithm>
+#include<cmath>
 #include "Graph.hpp"
 
 Graph::Graph(int nv){
@@ -37,7 +38,9 @@ bool Graph::doesHaveAnyPred(const vector<int> &first, const vector<int> &second)
 }
 
 void Graph::printOriginalList(){
-   //this->createOriginalList();
+   if(not(this->adjoint_status)){
+      return void();
+   }
    cout << "Original Graph: "<<endl;
    for(const auto &i : this->original_list){
       if(i.empty())
@@ -50,7 +53,7 @@ void Graph::printOriginalList(){
 }
 void Graph::transformToOriginal(){
    if(not(this->adjoint_status)){
-      //cout<< "Can't transform Graph that is not adjoint!"<< endl;
+      cout << "Can't transform Graph that is not adjoint" << endl;
       return;
    }
    int nv = this->num_of_vert; int new_vertex = 1;
@@ -71,6 +74,12 @@ void Graph::transformToOriginal(){
             this->edge_list[i][1] = this->edge_list[edge][0];
       }
    }
+   for(auto &i : this->edge_list){
+      for(auto &j : i){
+         cout << j << ' ';
+      }
+      cout<<endl;
+   }
    // calculate what will be the max value of vectors that we need to emplace back
    auto max = *max_element(begin(this->edge_list[0]), end(this->edge_list[0]));
    for(int i=0; i<this->edge_list.size(); i++){
@@ -84,7 +93,7 @@ void Graph::transformToOriginal(){
       this->original_list[i].resize(0);
    }
    for(int i = 0; i < edge_list.size(); i++){
-      this->original_list[this->edge_list[i][0]].push_back(this->edge_list[i][1]);
+         this->original_list[this->edge_list[i][0] - 1].push_back(this->edge_list[i][1]);
    }
 }
 void Graph::isAdjoint(){
@@ -123,7 +132,9 @@ void Graph::isLine(){
    int size = 0, common_els = 0;
    if(this->adjoint_status){ // if graph is not adjoint, then it's not line graph
       for(int i = 0; i < nv; i++){
-         for(int j = (i + 1); j < nv; j++){
+         for(int j = 0; j < nv; j++){
+            if(i == j)
+               continue;
             common_els = 0;
             for(int k = 0; k < (int)this->adj_list[i].size(); k++){
                for(int l = 0; l < (int)this->adj_list[j].size(); l++){
@@ -243,7 +254,7 @@ void Graph::clearPredList(){
 }
 void Graph::saveOriginalGraph(){
    if(not(this->adjoint_status))
-      return;
+      return void();
    int nv_counter = 0;
    for(auto &i : this->original_list)
       if(not(i.empty()))
@@ -254,8 +265,10 @@ void Graph::saveOriginalGraph(){
       file.clear();
       file << nv << endl; //read first line which is our number of vertices
       for(auto &i : this->original_list){
-         if(i.empty())
+         if(i.empty()){
+            file<<endl;
             continue;
+         }
          for(auto &j : i){
             file << j << ' ';
          }

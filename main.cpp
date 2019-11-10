@@ -52,6 +52,7 @@ int main(){
    G->printOriginalList();
    G->saveOriginalGraph();
 
+
    /*ProgressBar progressBar(100000, 100); int adj_counter = 0, line_counter = 0;
    for(int i=0; i<100000;i++){
       auto *G = new Graph(2);

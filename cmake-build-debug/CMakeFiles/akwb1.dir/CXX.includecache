@@ -6,7 +6,21 @@
 
 #IncludeRegexTransform: 
 
-../Libraries/Graph.hpp
+/home/moneymaker/Desktop/akwb1/Libraries/Graph.cpp
+iostream
+-
+string
+-
+cstdlib
+-
+algorithm
+-
+cmath
+-
+Graph.hpp
+/home/moneymaker/Desktop/akwb1/Libraries/Graph.hpp
+
+/home/moneymaker/Desktop/akwb1/Libraries/Graph.hpp
 iostream
 -
 vector
@@ -17,22 +31,4 @@ fstream
 -
 cstdlib
 -
-
-/home/moneymaker/Desktop/akwb1/Libraries/ProgressBar.hpp
-chrono
--
-iostream
--
-
-/home/moneymaker/Desktop/akwb1/main.cpp
-iostream
--
-vector
--
-string
--
-Graph.hpp
-/home/moneymaker/Desktop/akwb1/Graph.hpp
-Libraries/ProgressBar.hpp
-/home/moneymaker/Desktop/akwb1/Libraries/ProgressBar.hpp
 
