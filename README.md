@@ -8,3 +8,5 @@ Authors
 
 Visualization
 -----
+<img src="https://github.com/777moneymaker/akwb1/blob/master/img/graf_oryginalny.png?raw=true" />
+<img src="https://github.com/777moneymaker/akwb1/blob/master/img/graf_sprzezony.png?raw=true" />
