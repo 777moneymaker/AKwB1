@@ -1,25 +1,19 @@
-//
-// Created by Miłosz Chodkowski on 10/20/19.
-//    ______ ______ ______                                                    _
-//   |____  |____  |____  |                                                  | |
-//       / /    / /    / /   _ __ ___   ___  _ __   ___ _   _ _ __ ___   __ _| | _____ _ __
-//      / /    / /    / /   | '_ ` _ \ / _ \| '_ \ / _ | | | | '_ ` _ \ / _` | |/ / _ | '__|
-//     / /    / /    / /    | | | | | | (_) | | | |  __| |_| | | | | | | (_| |   |  __| |
-//    /_/    /_/    /_/     |_| |_| |_|\___/|_| |_|\___|\__, |_| |_| |_|\__,_|_|\_\___|_|
-//                                                       __/ |
-//
+/**
+ * This is a Graphing program. It contains Graph object.
+ * Written for Bioinformatics Algorithms class.
+ * Purpose: Check if loaded Graph is Line Graph. Make transformation. Save to file.
+ * @author Miłosz Chodkowski
+ * @version 1.0 15/11/2019
+ */
 
 #include <iostream>
 #include <vector>
 #include <string>
 #include "Graph.hpp"
-#include "Libraries/ProgressBar.hpp"
 
 using namespace std;
 
 int main(){
-   srand(time(nullptr));
-   string filename;
    int num_of_vert;
    cout << "Give the number of vertices between 1..50: " << endl;
    try{
@@ -49,32 +43,7 @@ int main(){
    else
       cout<<"Graph is not line graph;"<<endl;
    G->transformToOriginal();
-   G->printOriginalList();
    G->saveOriginalGraph();
-
-
-   /*ProgressBar progressBar(100000, 100); int adj_counter = 0, line_counter = 0;
-   for(int i=0; i<100000;i++){
-      auto *G = new Graph(2);
-      //G->printMatrix();
-      //G->printList();
-      //G->printPredList();
-      G->isAdjoint();
-      G->isLine();
-      if(G->getAdjointStatus())
-         adj_counter++;
-      if(G->getLineStatus())
-         line_counter++;
-      G->transformToOriginal();
-      //G->printOriginalList();
-      //G->saveOriginalGraph();
-      delete G;
-      ++progressBar;
-      progressBar.display();
-   }
-   progressBar.done();
-   cout<< endl<< adj_counter << line_counter<<endl;
-    */
 
    return 0;
 }

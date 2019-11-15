@@ -9,7 +9,6 @@ add_executable(akwb1
         cmake-build-debug/graph.txt
         Libraries/Graph.cpp
         Libraries/Graph.hpp
-        Libraries/ProgressBar.hpp
         LICENSE
         main.cpp
         progress_bar_LICENSE
