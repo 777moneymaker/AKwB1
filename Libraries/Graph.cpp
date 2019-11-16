@@ -10,6 +10,7 @@
 #include <algorithm>
 #include <cstdlib>
 #include <string>
+#include <tuple>
 #include "Graph.hpp"
 
 /**
@@ -22,6 +23,8 @@ Graph::Graph(int nv){
    this->createList();
    this->createPredList();
 }
+
+
 
 /**
  * Public function for getting object status.
@@ -68,55 +71,42 @@ void Graph::printOriginalList(){
 }
 
 /**
- * Method gets adjacency status of G. If True, then it performs transformation to original graph H.
- * Main rule of transformation is to build a list of edges containing edges (1, 2),(3, 4),...,(n-1, n).
- * Next step is to make a change in those elements such that list will contain only edges that
- * are present in original graph H.
- */
+* Method gets adjacency status of G. If True, then it performs transformation to original graph H.
+* Main rule of transformation is to build a list of edges containing edges (1, 2),(3, 4),...,(n-1, n).
+* Next step is to make a change in those elements such that list will contain only edges that
+* are present in original graph H.
+*/
 void Graph::transformToOriginal(){
-   int nv = this->num_of_vert;
+   int nv = this->num_of_vert;  vector<tuple<int, int, int> > edge_list;
    if(not(this->adjoint_status)){
       cout << "Can't transform Graph that is not adjoint" << endl;
       return;
    }
    // build a graph with additional vertices
-   for(int i = 0, new_vertex = 0; i < nv; i++){
-      this->edge_list.emplace_back(vector<int>());
-      for(int j = 0; j < 2; j++, new_vertex++){
-         this->edge_list[i].push_back(new_vertex);
+   for(int i = 0, new_vertex = 1; i < nv; i++, new_vertex++){
+      edge_list.emplace_back(tuple<int, int, int>(new_vertex++, i+1, new_vertex));
+   }
+   // transform graph
+   for(int i = 0; i < nv; i++){
+      for(int j = 0; j < nv; j++){
+         if(this->adj_matrix[i][j] == 1){
+            auto compare = get<0>(edge_list[j]);
+            get<0>(edge_list[j]) = get<2>(edge_list[i]);
+            for(auto &tup : edge_list){
+               if(get<0>(tup) == compare){
+                  get<0>(tup) =  get<2>(edge_list[i]);
+               }
+               if(get<2>(tup) == compare){
+                  get<2>(tup) = get<2>(edge_list[i]);
+               }
+            }
+         }
       }
    }
-   // transform graph using elements in adjacency list
-   for (int i = 0; i < nv; i++){
-      for (int j = 0; j < (int)adj_list[i].size(); j++){
-         // store current edge
-         int edge = this->adj_list[i][j] - 1;
-         // check if any vertices should be changed
-         if (this->edge_list[i][1] < this->edge_list[edge][0])
-           this->edge_list[edge][0] = this->edge_list[i][1];
-         else
-            this->edge_list[i][1] = this->edge_list[edge][0];
-      }
+   for(const auto &tup : edge_list){
+      int index = get<0>(tup) - 1, val = get<2>(tup);
+      this->original_list[index].push_back(val);
    }
-   // calculate what will be the max value of vectors that we need to emplace back
-   auto max = *max_element(begin(this->edge_list[0]), end(this->edge_list[0]));
-   for(int i=0; i < (int)this->edge_list.size(); i++){
-      auto temp_max = *max_element(begin(this->edge_list[i]), end(this->edge_list[i]));
-      if(temp_max > max) max = temp_max;
-   }
-   // if we have more vertices than our list says
-   if(this->edge_list.size() > max)
-      max = (int)this->edge_list.size();
-   // create original_list from list of edges
-   for(int i = 0; i < max+1; i++){
-      this->original_list.emplace_back(vector<int>());
-      this->original_list[i].resize(0);
-   }
-   // for edge (i, j) we add j as succesor of i.
-   for(int i = 0; i < (int)edge_list.size(); i++)
-         this->original_list[this->edge_list[i][0] - 1].push_back(this->edge_list[i][1]);
-
-   cout << endl << "Graph Transformed!" << endl;
 }
 
 /**
@@ -340,7 +330,7 @@ void Graph::saveOriginalGraph(){
    vector<int> counter;
    if(not(this->adjoint_status))
       return void();
-   for(int i = 0;i< this->original_list.size(); i++){
+   for(int i = 0; i < 50 ; i++){
       if(not(this->original_list[i].empty())){
          if(not(count(counter.begin(), counter.end(), (i+1))))
             counter.push_back(i+1);

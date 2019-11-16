@@ -41,7 +41,7 @@ int main(){
    if(G->getLineStatus())
       cout<<"Graph is line graph;"<<endl;
    else
-      cout<<"Graph is not line graph;"<<endl;
+      cout<<"Graph is not line graph;"<<endl;;
    G->transformToOriginal();
    G->saveOriginalGraph();
 

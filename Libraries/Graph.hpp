@@ -14,6 +14,7 @@
 #include <string>
 #include <fstream>
 #include <cstdlib>
+#include <tuple>
 
 using namespace std;
 
@@ -27,9 +28,8 @@ private:
    bool multigraph_status = false;
 
    vector<int> adj_list[50];
-   vector<vector<int> > original_list;
+   vector<int> original_list[50];
    vector<int> pred_list[50];
-   vector<vector<int> > edge_list;
 
    /**
     * Method checks does two lists share any element.

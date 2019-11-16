@@ -104,9 +104,6 @@
 		<Unit filename="/home/moneymaker/Desktop/akwb1/main.cpp">
 			<Option target="akwb1"/>
 		</Unit>
-		<Unit filename="/home/moneymaker/Desktop/akwb1/progress_bar_LICENSE">
-			<Option target="akwb1"/>
-		</Unit>
 		<Unit filename="/home/moneymaker/Desktop/akwb1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

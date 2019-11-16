@@ -17,6 +17,8 @@ fstream
 -
 cstdlib
 -
+tuple
+-
 
 /home/moneymaker/Desktop/akwb1/Libraries/Graph.cpp
 iostream
@@ -26,6 +28,8 @@ algorithm
 cstdlib
 -
 string
+-
+tuple
 -
 Graph.hpp
 /home/moneymaker/Desktop/akwb1/Libraries/Graph.hpp
@@ -40,6 +44,8 @@ string
 fstream
 -
 cstdlib
+-
+tuple
 -
 
 /home/moneymaker/Desktop/akwb1/main.cpp
