@@ -95,9 +95,6 @@
 		<Unit filename="/home/moneymaker/Desktop/akwb1/Libraries/Graph.hpp">
 			<Option target="akwb1"/>
 		</Unit>
-		<Unit filename="/home/moneymaker/Desktop/akwb1/Libraries/ProgressBar.hpp">
-			<Option target="akwb1"/>
-		</Unit>
 		<Unit filename="/home/moneymaker/Desktop/akwb1/README.md">
 			<Option target="akwb1"/>
 		</Unit>

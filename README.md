@@ -4,7 +4,7 @@ Written for Bioinformatic's Algorithms laboratories.
 
 Authors
 -----
-**Miłosz Chodkowski_PUT Poznan** [777moneymaker](https://github.com/777moneymaker)
+**Miłosz Chodkowski[777moneymaker](https://github.com/777moneymaker) [PUT Poznań](https://www.put.poznan.pl/)**
 
 Visualization
 -----

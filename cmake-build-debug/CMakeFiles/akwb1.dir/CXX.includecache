@@ -6,16 +6,26 @@
 
 #IncludeRegexTransform: 
 
-/home/moneymaker/Desktop/akwb1/Libraries/Graph.cpp
+../Libraries/Graph.hpp
 iostream
+-
+vector
 -
 string
 -
+fstream
+-
 cstdlib
+-
+
+/home/moneymaker/Desktop/akwb1/Libraries/Graph.cpp
+iostream
 -
 algorithm
 -
-cmath
+cstdlib
+-
+string
 -
 Graph.hpp
 /home/moneymaker/Desktop/akwb1/Libraries/Graph.hpp
@@ -31,4 +41,14 @@ fstream
 -
 cstdlib
 -
+
+/home/moneymaker/Desktop/akwb1/main.cpp
+iostream
+-
+vector
+-
+string
+-
+Graph.hpp
+/home/moneymaker/Desktop/akwb1/Graph.hpp
 
