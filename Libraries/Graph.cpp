@@ -24,8 +24,6 @@ Graph::Graph(int nv){
    this->createPredList();
 }
 
-
-
 /**
  * Public function for getting object status.
  * @return Adjacency status.
