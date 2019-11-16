@@ -11,5 +11,4 @@ add_executable(akwb1
         Libraries/Graph.hpp
         LICENSE
         main.cpp
-        progress_bar_LICENSE
         README.md)
