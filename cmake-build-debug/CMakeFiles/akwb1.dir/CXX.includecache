@@ -6,20 +6,6 @@
 
 #IncludeRegexTransform: 
 
-../Libraries/Graph.hpp
-iostream
--
-vector
--
-string
--
-fstream
--
-cstdlib
--
-tuple
--
-
 /home/moneymaker/Desktop/akwb1/Libraries/Graph.cpp
 iostream
 -
@@ -47,14 +33,4 @@ cstdlib
 -
 tuple
 -
-
-/home/moneymaker/Desktop/akwb1/main.cpp
-iostream
--
-vector
--
-string
--
-Graph.hpp
-/home/moneymaker/Desktop/akwb1/Graph.hpp
 

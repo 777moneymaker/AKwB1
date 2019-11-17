@@ -64,6 +64,8 @@ private:
     */
    void clearMatrix();
 
+
+   void changeIndexes();
 public:
    /**
     * This is Graph class initializer method.

@@ -68,11 +68,12 @@ void Graph::printOriginalList(){
    }
 }
 
+
 /**
 * Method gets adjacency status of G. If True, then it performs transformation to original graph H.
 * Main rule of transformation is to build a list of edges containing edges (1, 2),(3, 4),...,(n-1, n).
 * Next step is to make a change in those elements such that list will contain only edges that
-* are present in original graph H.
+* are present in original graph H. Last step is to change indexes of vertices from 1 to n : n := number of vertices in original graph
 */
 void Graph::transformToOriginal(){
    int nv = this->num_of_vert;  vector<tuple<int, int, int> > edge_list;
@@ -101,6 +102,28 @@ void Graph::transformToOriginal(){
          }
       }
    }
+
+   vector<int> numbers;
+   for(int i = 0; i < 50; i++){
+      numbers.push_back(i+1);
+   }
+   for(int i = 1; i < 50; i++){
+      bool was_changed = false;
+      for(auto &tup : edge_list){
+         if(get<0>(tup) == i){
+            get<0>(tup) = numbers.front();
+            was_changed = true;
+         }
+         if(get<2>(tup) == i){
+            get<2>(tup) = numbers.front();
+            was_changed = true;
+         }
+
+      }
+      if(was_changed)
+         numbers.erase(numbers.begin());
+   }
+
    for(const auto &tup : edge_list){
       int index = get<0>(tup) - 1, val = get<2>(tup);
       this->original_list[index].push_back(val);
@@ -123,8 +146,11 @@ void Graph::isAdjoint(){
       // checks if there is any vertex that has any successors
       if(not(this->adj_list[i].empty()))
          for(int j = 0; j < nv; j++){
-            if (i == j) continue;
+            if (i == j)
+               continue;
             common_els = 0;
+            if(this->adj_list[i].empty() and this->adj_list[j].empty())
+               continue;
             for(int k = 0; k < (int)this->adj_list[i].size(); k++){
                for(int l = 0; l < (int)this->adj_list[j].size(); l++){
                   // sets the number of our common elements
@@ -162,22 +188,32 @@ void Graph::isLine(){
    }
    for(int i = 0; i < nv; i++){
       for(int j = 0; j < nv; j++){
+         // don't want to compare the same list
          if(i == j) continue;
          common_els = 0;
-         for(int k = 0; k < (int)this->adj_list[i].size(); k++){
-            for(int l = 0; l < (int)this->adj_list[j].size(); l++){
-               // sets the number of our common elements
-               if(this->adj_list[i].size() >= this->adj_list[j].size())
-                  size = (int)this->adj_list[i].size();
-               else
-                  size = (int)this->adj_list[j].size();
-               // if we found common element, then we increment
-               if(this->adj_list[i][k] == this->adj_list[j][l])
-                  common_els++;
+         // don't want to compare empty lists
+         if(this->adj_list[i].empty() and this->adj_list[j].empty())
+            continue;
+         // only compare lists that are not empty
+         if(not(this->adj_list[i].empty()) and not(this->adj_list[j].empty())){
+            for(int k = 0; k < (int)this->adj_list[i].size(); k++){
+               for(int l = 0; l < (int)this->adj_list[j].size(); l++){
+                  // sets the number of our common elements
+                  if(this->adj_list[i].size() >= this->adj_list[j].size())
+                     size = (int)this->adj_list[i].size();
+                  else
+                     size = (int)this->adj_list[j].size();
+                  // if we found common element, then we increment
+                  if(this->adj_list[i][k] == this->adj_list[j][l])
+                     common_els++;
+               }
             }
+         }else{
+            // if any of two lists is empty then continue
+            continue;
          }
-         // if common elements for two vertices are equal or if this is an empty set
-         if((common_els == size) or (common_els == 0)){
+         // if common elements for two vertices are equal
+         if(common_els == size){
             /*If we find a common successors, then we must compare list of predecessors for both of it's vertices.
             Then if we find any common predecessor, we know that graph is not line graph*/
             bool status = this->doesHaveAnyPred(this->pred_list[i], this->pred_list[j]);
@@ -342,12 +378,12 @@ void Graph::saveOriginalGraph(){
    fstream file("graph_original.txt", fstream::out|fstream::trunc);
    if(file.good()){
       file << nv << endl; //read first line which is our number of vertices
-      for(auto &i : this->original_list){
-         if(i.empty()){
-            file<<endl;
+      for(int i = 0; i< nv; i++){
+         if(this->original_list[i].empty()){
+            file<< '/'<<endl;
             continue;
          }
-         for(auto &j : i){
+         for(auto &j : this->original_list[i]){
             file << j << ' ';
          }
          file << "/" << endl;
@@ -373,6 +409,10 @@ void Graph::loadGraph(){
       // reads number of vertices (first line)
       file >> val;
       nv = this->num_of_vert = stoi(val);
+      if(nv < 2){
+         cerr << "Graph can't have less than 2 vertices";
+         exit(EXIT_FAILURE);
+      }
       for(int i = 0; i < nv;){
          for(int j = 0; j < nv; j++){
             // read the number
