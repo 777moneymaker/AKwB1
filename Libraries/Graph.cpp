@@ -104,6 +104,7 @@ void Graph::transformToOriginal(){
    }
 
    vector<int> numbers;
+   numbers.reserve(50);
    for(int i = 0; i < 50; i++){
       numbers.push_back(i+1);
    }
@@ -138,8 +139,8 @@ void Graph::transformToOriginal(){
  */
 void Graph::isAdjoint(){
    if(this->multigraph_status){
-      this->adjoint_status = false;
-      return void();
+      cerr << "Graph is multigraph! Can't be adjoint!";
+      exit(EXIT_FAILURE);
    }
    int nv = this->num_of_vert, size = 0, common_els = 0;
    for(int i = 0; i < nv; i++){
@@ -279,6 +280,7 @@ void Graph::createList(){
          if(this->adj_matrix[i][j] > 1){
             this->multigraph_status = true;
             this->adjoint_status = false;
+            this->line_status = false;
             for(int k = 0; k < this->adj_matrix[i][j]; k++){
                this->adj_list[i].push_back(j + 1);
             }
