@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/moneymaker/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
 
 # The command to remove a file.
-RM = /home/moneymaker/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/bin/cmake/linux/bin/cmake -E remove -f
+RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/moneymaker/Desktop/akwb1
+CMAKE_SOURCE_DIR = /Users/mchodkowski/Desktop/akwb/akwb1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/moneymaker/Desktop/akwb1/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/mchodkowski/Desktop/akwb/akwb1/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/akwb1.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/akwb1.dir/flags.make
 
 CMakeFiles/akwb1.dir/Libraries/Graph.cpp.o: CMakeFiles/akwb1.dir/flags.make
 CMakeFiles/akwb1.dir/Libraries/Graph.cpp.o: ../Libraries/Graph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/akwb1.dir/Libraries/Graph.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/akwb1.dir/Libraries/Graph.cpp.o -c /home/moneymaker/Desktop/akwb1/Libraries/Graph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mchodkowski/Desktop/akwb/akwb1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/akwb1.dir/Libraries/Graph.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/akwb1.dir/Libraries/Graph.cpp.o -c /Users/mchodkowski/Desktop/akwb/akwb1/Libraries/Graph.cpp
 
 CMakeFiles/akwb1.dir/Libraries/Graph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/akwb1.dir/Libraries/Graph.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moneymaker/Desktop/akwb1/Libraries/Graph.cpp > CMakeFiles/akwb1.dir/Libraries/Graph.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mchodkowski/Desktop/akwb/akwb1/Libraries/Graph.cpp > CMakeFiles/akwb1.dir/Libraries/Graph.cpp.i
 
 CMakeFiles/akwb1.dir/Libraries/Graph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/akwb1.dir/Libraries/Graph.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moneymaker/Desktop/akwb1/Libraries/Graph.cpp -o CMakeFiles/akwb1.dir/Libraries/Graph.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mchodkowski/Desktop/akwb/akwb1/Libraries/Graph.cpp -o CMakeFiles/akwb1.dir/Libraries/Graph.cpp.s
 
 CMakeFiles/akwb1.dir/main.cpp.o: CMakeFiles/akwb1.dir/flags.make
 CMakeFiles/akwb1.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/akwb1.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/akwb1.dir/main.cpp.o -c /home/moneymaker/Desktop/akwb1/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/mchodkowski/Desktop/akwb/akwb1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/akwb1.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/akwb1.dir/main.cpp.o -c /Users/mchodkowski/Desktop/akwb/akwb1/main.cpp
 
 CMakeFiles/akwb1.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/akwb1.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/moneymaker/Desktop/akwb1/main.cpp > CMakeFiles/akwb1.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mchodkowski/Desktop/akwb/akwb1/main.cpp > CMakeFiles/akwb1.dir/main.cpp.i
 
 CMakeFiles/akwb1.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/akwb1.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/moneymaker/Desktop/akwb1/main.cpp -o CMakeFiles/akwb1.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mchodkowski/Desktop/akwb/akwb1/main.cpp -o CMakeFiles/akwb1.dir/main.cpp.s
 
 # Object files for target akwb1
 akwb1_OBJECTS = \
@@ -95,7 +95,7 @@ akwb1: CMakeFiles/akwb1.dir/Libraries/Graph.cpp.o
 akwb1: CMakeFiles/akwb1.dir/main.cpp.o
 akwb1: CMakeFiles/akwb1.dir/build.make
 akwb1: CMakeFiles/akwb1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable akwb1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/mchodkowski/Desktop/akwb/akwb1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable akwb1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/akwb1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/akwb1.dir/clean:
 .PHONY : CMakeFiles/akwb1.dir/clean
 
 CMakeFiles/akwb1.dir/depend:
-	cd /home/moneymaker/Desktop/akwb1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/moneymaker/Desktop/akwb1 /home/moneymaker/Desktop/akwb1 /home/moneymaker/Desktop/akwb1/cmake-build-debug /home/moneymaker/Desktop/akwb1/cmake-build-debug /home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles/akwb1.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/mchodkowski/Desktop/akwb/akwb1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/mchodkowski/Desktop/akwb/akwb1 /Users/mchodkowski/Desktop/akwb/akwb1 /Users/mchodkowski/Desktop/akwb/akwb1/cmake-build-debug /Users/mchodkowski/Desktop/akwb/akwb1/cmake-build-debug /Users/mchodkowski/Desktop/akwb/akwb1/cmake-build-debug/CMakeFiles/akwb1.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/akwb1.dir/depend
 

@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/moneymaker/Desktop/akwb1/Libraries/Graph.cpp" "/home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles/akwb1.dir/Libraries/Graph.cpp.o"
-  "/home/moneymaker/Desktop/akwb1/main.cpp" "/home/moneymaker/Desktop/akwb1/cmake-build-debug/CMakeFiles/akwb1.dir/main.cpp.o"
+  "/Users/mchodkowski/Desktop/akwb/akwb1/Libraries/Graph.cpp" "/Users/mchodkowski/Desktop/akwb/akwb1/cmake-build-debug/CMakeFiles/akwb1.dir/Libraries/Graph.cpp.o"
+  "/Users/mchodkowski/Desktop/akwb/akwb1/main.cpp" "/Users/mchodkowski/Desktop/akwb/akwb1/cmake-build-debug/CMakeFiles/akwb1.dir/main.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

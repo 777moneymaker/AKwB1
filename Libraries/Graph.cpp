@@ -411,8 +411,8 @@ void Graph::loadGraph(){
       // reads number of vertices (first line)
       file >> val;
       nv = this->num_of_vert = stoi(val);
-      if(nv < 2){
-         cerr << "Graph can't have less than 2 vertices";
+      if(nv < 1){
+         cerr << "Graph can't have less than 1 vertices";
          exit(EXIT_FAILURE);
       }
       for(int i = 0; i < nv;){
@@ -438,8 +438,3 @@ void Graph::loadGraph(){
    }
    return void();
 }
-
-
-
-
-

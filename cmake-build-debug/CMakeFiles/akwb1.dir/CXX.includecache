@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/moneymaker/Desktop/akwb1/Libraries/Graph.cpp
+/Users/mchodkowski/Desktop/akwb/akwb1/Libraries/Graph.cpp
 iostream
 -
 algorithm
@@ -18,9 +18,9 @@ string
 tuple
 -
 Graph.hpp
-/home/moneymaker/Desktop/akwb1/Libraries/Graph.hpp
+/Users/mchodkowski/Desktop/akwb/akwb1/Libraries/Graph.hpp
 
-/home/moneymaker/Desktop/akwb1/Libraries/Graph.hpp
+/Users/mchodkowski/Desktop/akwb/akwb1/Libraries/Graph.hpp
 iostream
 -
 vector
